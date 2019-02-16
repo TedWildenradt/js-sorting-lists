@@ -59,15 +59,8 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
       return -1
     }
   })
-
-  const bandsList = document.querySelector('#bands')
-
-  bands.forEach(band => {
-    const newItem = document.createElement('LI')
-    const text = document.createTextNode(`${band}`);
-    newItem.appendChild(text)
-    bandsList.appendChild(newItem)
-  });
+  
+  document.querySelector('#bands').innerHTML = sortedBands.map( band => `<li>${band}</li>`).join('');
 
 </script>
 
